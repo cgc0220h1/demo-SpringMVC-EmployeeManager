@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo nhân viên mới</title>
+</head>
+<body>
+<h3>Xin chào, vui lòng nhập thông tin của nhân viên</h3>
+<form method="post" th:object="${employee}">
+    <label for="emp-id">ID nhân viên:
+        <input type="text" id="emp-id" th:field="*{id}">
+    </label><br>
+    <label for="emp-name">Tên nhân viên:
+        <input type="text" id="emp-name" th:field="*{name}">
+    </label><br>
+    <label for="emp-contact-number">Số điện thoại:
+        <input type="text" id="emp-contact-number" th:field="*{contactNumber}">
+    </label><br>
+    <input type="submit" value="submit">
+</form>
+</body>
+</html>
